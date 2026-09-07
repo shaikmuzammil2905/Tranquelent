@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Cpu, Server, Monitor, Compass, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import CapabilityCard from '../components/CapabilityCard';
+import heroImage from '../assets/image-copy-3.png';
 
 const Home = () => {
   const capabilities = [
@@ -108,14 +109,12 @@ const Home = () => {
           </div>
           <div className="hero-visual">
             <motion.div 
-              className="chip-graphic"
-              animate={{ 
-                boxShadow: ['0 0 20px rgba(0,216,255,0.2)', '0 0 40px rgba(0,216,255,0.4)', '0 0 20px rgba(0,216,255,0.2)']
-              }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="hero-image-wrapper"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="circuit-lines"></div>
-              <Cpu size={80} className="text-accent" />
+              <img src={heroImage} alt="Semiconductor Engineering" className="w-full h-auto rounded-lg shadow-[0_0_40px_rgba(0,216,255,0.2)]" />
             </motion.div>
           </div>
         </div>
