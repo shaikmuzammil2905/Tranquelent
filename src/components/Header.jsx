@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo-new.png';
+import logo from '../assets/logo-latest.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

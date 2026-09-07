@@ -13,15 +13,11 @@ import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Insights from './pages/Insights';
-import Loader from './components/Loader';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <Router>
-      {isLoading && <Loader onLoadingComplete={() => setIsLoading(false)} />}
-      <div className={`app-container ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+      <div className="app-container">
         <Header />
         <main>
           <Routes>

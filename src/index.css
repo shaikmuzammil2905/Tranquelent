@@ -29,10 +29,6 @@
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-dark);
-  background-image: url('./assets/bg-all.png');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
   color: var(--color-text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu, Users, Code, Compass } from 'lucide-react';
+import { Cpu, Users, Code, Compass, Server } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 
 const About = () => {

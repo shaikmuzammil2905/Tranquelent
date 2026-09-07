@@ -80,7 +80,11 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* 1. HERO SECTION */}
-      <section className="hero-section relative bg-transparent">
+      <section 
+        className="hero-section relative bg-navy-dark"
+        style={{ backgroundImage: 'url(../assets/image-copy-3.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="absolute inset-0 bg-primary/90"></div>
         <div className="container hero-container relative z-10">
           <div className="hero-content">
             <motion.span 
