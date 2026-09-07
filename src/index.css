@@ -435,12 +435,12 @@ h4 { font-size: 1.25rem; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; text-align: center; color: var(--color-text-muted); font-size: 0.8rem; }
 
 /* Sections Padding Fix */
-.section { padding: 2rem 0; }
-@media (min-width: 768px) { .section { padding: 3rem 0; } }
-@media (min-width: 1024px) { .section { padding: 4rem 0; } }
+.section { padding: 1.5rem 0; }
+@media (min-width: 768px) { .section { padding: 2rem 0; } }
+@media (min-width: 1024px) { .section { padding: 3rem 0; } }
 
-.section-padding { padding: 2rem 0; }
-@media (min-width: 1024px) { .section-padding { padding: 4rem 0; } }
+.section-padding { padding: 1.5rem 0; }
+@media (min-width: 1024px) { .section-padding { padding: 3rem 0; } }
 
 .section-label {
   color: var(--color-accent);
@@ -452,7 +452,7 @@ h4 { font-size: 1.25rem; }
   display: block;
 }
 
-.section-title { font-size: clamp(28px, 3.5vw, 46px); margin-bottom: 1.25rem; line-height: 1.1; }
+.section-title { font-size: clamp(36px, 4.5vw, 56px); margin-bottom: 1rem; line-height: 1.1; font-weight: 800; }
 
 .section-description { font-size: 1.05rem; color: var(--color-text-muted); }
 

@@ -27,7 +27,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link to="/" className="logo-container">
-          <img src={logo} alt="Tranquelent Logo" className="logo" />
+          <img src={logo} alt="Tranquelent Logo" className="logo" style={{ height: '56px', width: 'auto' }} />
         </Link>
 
         {/* Desktop Navigation */}

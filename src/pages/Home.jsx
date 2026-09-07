@@ -80,57 +80,51 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* 1. HERO SECTION */}
-      <section 
-        className="hero-section relative bg-navy-dark"
-        style={{ backgroundImage: 'url(../assets/image-copy-3.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-primary/90"></div>
-        <div className="container hero-container relative z-10">
-          <div className="hero-content">
-            <motion.span 
-              className="section-label"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              ENGINEERING • TECHNOLOGY • INNOVATION
-            </motion.span>
-            <motion.h1 
-              className="hero-title"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              Engineering Intelligent Systems for <span className="text-accent">What's Next</span>
-            </motion.h1>
-            <motion.p 
-              className="hero-description"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Advanced semiconductor, embedded, software and digital engineering solutions designed to accelerate innovation from concept to scale.
-            </motion.p>
-            <motion.div 
-              className="hero-buttons"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Link to="/contact" className="btn btn-primary shadow-[0_0_15px_rgba(0,216,255,0.4)]">Talk to Our Experts &rarr;</Link>
-              <Link to="/services" target="_blank" rel="noopener noreferrer" className="btn btn-secondary border-2 shadow-[0_0_15px_rgba(0,216,255,0.2)] hover:shadow-[0_0_25px_rgba(0,216,255,0.6)]">Explore Our Services</Link>
-            </motion.div>
-          </div>
-          <div className="hero-visual">
-            <motion.div 
-              className="hero-image-wrapper"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img src={heroImage} alt="Semiconductor Engineering" className="w-full h-auto rounded-lg shadow-[0_0_40px_rgba(0,216,255,0.2)] border border-accent/30" fetchPriority="high" />
-            </motion.div>
-          </div>
+      <section className="hero-section relative overflow-hidden flex items-center justify-center text-center min-h-[80vh]">
+        {/* Animated Background Image */}
+        <motion.div 
+          className="absolute inset-0 z-0"
+          style={{ backgroundImage: 'url(../assets/image-copy-3.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-navy-dark/70 z-10"></div>
+        
+        <div className="container relative z-20 flex flex-col items-center max-w-4xl mx-auto">
+          <motion.span 
+            className="section-label mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            ENGINEERING • TECHNOLOGY • INNOVATION
+          </motion.span>
+          <motion.h1 
+            className="hero-title text-5xl md:text-7xl font-extrabold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Engineering Intelligent Systems for <span className="text-accent">What's Next</span>
+          </motion.h1>
+          <motion.p 
+            className="hero-description text-xl text-white/90 mb-10 max-w-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Advanced semiconductor, embedded, software and digital engineering solutions designed to accelerate innovation from concept to scale.
+          </motion.p>
+          <motion.div 
+            className="hero-buttons flex flex-col sm:flex-row gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Link to="/contact" className="btn btn-primary shadow-[0_0_15px_rgba(0,216,255,0.4)] px-8 py-4 text-lg">Talk to Our Experts &rarr;</Link>
+            <Link to="/services" target="_blank" rel="noopener noreferrer" className="btn btn-secondary border-2 shadow-[0_0_15px_rgba(0,216,255,0.2)] hover:shadow-[0_0_25px_rgba(0,216,255,0.6)] px-8 py-4 text-lg">Explore Our Services</Link>
+          </motion.div>
         </div>
       </section>
 
