@@ -69,8 +69,8 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* 1. HERO SECTION */}
-      <section className="hero-section">
+      {/* 1. HERO SECTION (DARK NAVY) */}
+      <section className="hero-section bg-navy-dark">
         <div className="container hero-container">
           <div className="hero-content">
             <motion.span 
@@ -114,19 +114,19 @@ const Home = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <img src={heroImage} alt="Semiconductor Engineering" className="w-full h-auto rounded-lg shadow-[0_0_40px_rgba(0,216,255,0.2)]" />
+              <img src={heroImage} alt="Semiconductor Engineering" className="w-full h-auto rounded-lg shadow-[0_0_40px_rgba(0,216,255,0.2)]" fetchPriority="high" />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 2. WHO WE ARE */}
-      <section className="who-we-are section">
+      {/* 2. WHO WE ARE (WHITE) */}
+      <section className="who-we-are section bg-white-section">
         <div className="container">
           <ScrollReveal>
             <span className="section-label">WHO WE ARE</span>
             <h2 className="section-title">A Semiconductor & Engineering Technology Services Company</h2>
-            <p className="section-description max-w-3xl">
+            <p className="section-description max-w-3xl text-muted">
               Tranquelent helps technology-driven organizations engineer intelligent systems across silicon, embedded platforms and software, combining deep engineering expertise with a future-focused approach.
             </p>
           </ScrollReveal>
@@ -142,8 +142,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. OUR CORE CAPABILITIES */}
-      <section className="core-capabilities section bg-navy-light">
+      {/* 3. OUR CORE CAPABILITIES (DARK NAVY) */}
+      <section className="core-capabilities section bg-navy-dark">
         <div className="container">
           <ScrollReveal>
             <span className="section-label">OUR CORE CAPABILITIES</span>
@@ -153,7 +153,7 @@ const Home = () => {
             </p>
           </ScrollReveal>
 
-          <div className="capabilities-grid mt-12">
+          <div className="capabilities-grid mt-8">
             {capabilities.map((cap, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <CapabilityCard {...cap} index={i} />
@@ -163,18 +163,18 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. WHY TRANQUELENT? */}
-      <section className="why-us section">
+      {/* 4. WHY TRANQUELENT? (WHITE) */}
+      <section className="why-us section bg-white-section">
         <div className="container">
           <ScrollReveal>
             <span className="section-label">WHY TRANQUELENT?</span>
             <h2 className="section-title">Engineering Depth.<br/>Real-World Impact.</h2>
-            <p className="section-description max-w-3xl">
+            <p className="section-description max-w-3xl text-muted">
               We bring together deep engineering expertise, industry knowledge and a delivery model built for quality, agility and long-term success.
             </p>
           </ScrollReveal>
 
-          <div className="principles-grid mt-12">
+          <div className="principles-grid mt-8">
             {[
               { icon: Cpu, title: "Engineering Expertise", desc: "Deep technical capability across silicon, systems, software and beyond." },
               { icon: Server, title: "Industry Knowledge", desc: "Domain understanding of semiconductor, electronics and technology verticals." },
@@ -191,8 +191,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 5. HOW WE WORK */}
-      <section className="how-we-work section bg-navy-light">
+      {/* 5. HOW WE WORK (DARK NAVY) */}
+      <section className="how-we-work section bg-navy-dark">
         <div className="container">
           <ScrollReveal>
             <span className="section-label">OUR DELIVERY MODEL</span>
@@ -218,38 +218,38 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 6. INDUSTRIES */}
-      <section className="industries section">
+      {/* 6. INDUSTRIES (WHITE) */}
+      <section className="industries section bg-white-section">
         <div className="container">
           <ScrollReveal>
             <span className="section-label">INDUSTRIES</span>
             <h2 className="section-title">Where We Make an Impact</h2>
           </ScrollReveal>
 
-          <div className="industries-layout mt-12">
+          <div className="industries-layout mt-8">
             <ScrollReveal className="industry-card primary glass-card">
-              <h3 className="industry-title">Semiconductor & Electronics</h3>
+              <h3 className="industry-title text-white">Semiconductor & Electronics</h3>
               <p className="industry-desc">Enabling next-gen chips, devices and intelligent systems.</p>
-              <Link to="/industries/semiconductor-electronics" className="btn btn-secondary mt-4">Learn More</Link>
+              <Link to="/industries/semiconductor-electronics" className="btn btn-secondary mt-4 w-fit">Learn More</Link>
             </ScrollReveal>
             <ScrollReveal delay={0.2} className="industry-card secondary glass-card">
               <h3 className="industry-title">Technology & Digital Engineering</h3>
               <p className="industry-desc">Building modern digital platforms, cloud and intelligent solutions.</p>
-              <Link to="/industries/technology-digital-engineering" className="btn btn-secondary mt-4">Learn More</Link>
+              <Link to="/industries/technology-digital-engineering" className="btn btn-primary mt-4 w-fit">Learn More</Link>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* 7. FINAL CTA */}
-      <section className="final-cta section bg-accent-glow">
+      {/* 7. FINAL CTA (DARK NAVY) */}
+      <section className="final-cta section bg-navy-dark">
         <div className="container text-center">
           <ScrollReveal>
             <h2 className="section-title">Let's Build What's Next</h2>
             <p className="section-description mx-auto max-w-2xl mb-8">
               Partner with Tranquelent for engineering solutions that turn complex challenges into intelligent systems.
             </p>
-            <Link to="/contact" className="btn btn-primary btn-lg">Talk to Our Experts &rarr;</Link>
+            <Link to="/contact" className="btn btn-primary">Talk to Our Experts &rarr;</Link>
           </ScrollReveal>
         </div>
       </section>
