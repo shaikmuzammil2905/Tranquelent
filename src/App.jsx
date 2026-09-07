@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,11 +13,15 @@ import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Insights from './pages/Insights';
+import Loader from './components/Loader';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <Router>
-      <div className="app-container">
+      {isLoading && <Loader onLoadingComplete={() => setIsLoading(false)} />}
+      <div className={`app-container ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
         <Header />
         <main>
           <Routes>
