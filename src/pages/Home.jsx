@@ -113,8 +113,8 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Link to="/contact" className="btn btn-primary">Talk to Our Experts &rarr;</Link>
-              <Link to="/services" className="btn btn-secondary">Explore Our Services</Link>
+              <Link to="/contact" className="btn btn-primary shadow-[0_0_15px_rgba(0,216,255,0.4)]">Talk to Our Experts &rarr;</Link>
+              <Link to="/services" target="_blank" rel="noopener noreferrer" className="btn btn-secondary border-2 shadow-[0_0_15px_rgba(0,216,255,0.2)] hover:shadow-[0_0_25px_rgba(0,216,255,0.6)]">Explore Our Services</Link>
             </motion.div>
           </div>
           <div className="hero-visual">
@@ -270,19 +270,19 @@ const Home = () => {
             <h2 className="section-title text-center">Where We Make an Impact</h2>
           </ScrollReveal>
 
-          <div className="industries-layout mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ScrollReveal className="industry-card primary glass-card h-full flex flex-col items-center text-center p-12 group hover:shadow-2xl transition-all border-t-4 border-t-accent">
+          <div className="industries-layout mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <ScrollReveal className="industry-card primary glass-card flex flex-col items-center text-center p-12 group hover:shadow-2xl transition-all border-t-4 border-t-accent h-full">
               <Cpu size={48} className="text-accent mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="industry-title text-2xl font-bold text-white mb-4">Semiconductor & Electronics</h3>
               <p className="industry-desc text-white/80 mb-8 flex-grow">Enabling next-gen chips, devices and intelligent systems with deep technical capability.</p>
-              <Link to="/industries/semiconductor-electronics" className="btn btn-secondary w-full">Explore Industry</Link>
+              <Link to="/industries/semiconductor-electronics" className="btn btn-secondary w-full mt-auto">Explore Industry</Link>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.2} className="industry-card secondary glass-card h-full flex flex-col items-center text-center p-12 group hover:shadow-2xl transition-all border-t-4 border-t-accent">
+            <ScrollReveal delay={0.2} className="industry-card secondary glass-card flex flex-col items-center text-center p-12 group hover:shadow-2xl transition-all border-t-4 border-t-accent h-full">
               <Server size={48} className="text-accent mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="industry-title text-2xl font-bold text-white mb-4">Technology & Digital Engineering</h3>
               <p className="industry-desc text-white/80 mb-8 flex-grow">Building modern digital platforms, cloud architectures, and intelligent solutions.</p>
-              <Link to="/industries/technology-digital-engineering" className="btn btn-secondary w-full">Explore Industry</Link>
+              <Link to="/industries/technology-digital-engineering" className="btn btn-secondary w-full mt-auto">Explore Industry</Link>
             </ScrollReveal>
           </div>
         </div>
