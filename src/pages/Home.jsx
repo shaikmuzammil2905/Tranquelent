@@ -79,12 +79,8 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* 1. HERO SECTION (DARK NAVY) */}
-      <section 
-        className="hero-section bg-navy-dark relative"
-        style={{ backgroundImage: 'url(../assets/image-copy-3.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-primary/80"></div>
+      {/* 1. HERO SECTION */}
+      <section className="hero-section relative bg-transparent">
         <div className="container hero-container relative z-10">
           <div className="hero-content">
             <motion.span 
